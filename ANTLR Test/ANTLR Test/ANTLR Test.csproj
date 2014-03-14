@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Antlr4 Include="sparql.g4">
+    <Antlr4 Include="sparql2XML.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>ANTLR_Test</CustomToolNamespace>
       <Listener>True</Listener>

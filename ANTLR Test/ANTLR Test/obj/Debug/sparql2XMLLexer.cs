@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql.g4 by ANTLR 4.2-SNAPSHOT
+// Generated from D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -30,7 +30,7 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.2-SNAPSHOT")]
 [System.CLSCompliant(false)]
-public partial class sparqlLexer : Lexer {
+public partial class sparql2XMLLexer : Lexer {
 	public const int
 		T__71=1, T__70=2, T__69=3, T__68=4, T__67=5, T__66=6, T__65=7, T__64=8, 
 		T__63=9, T__62=10, T__61=11, T__60=12, T__59=13, T__58=14, T__57=15, T__56=16, 
@@ -99,13 +99,13 @@ public partial class sparqlLexer : Lexer {
 	public	XElement x=new XElement("sparql"), spo=new XElement("spo");
 
 
-	public sparqlLexer(ICharStream input)
+	public sparql2XMLLexer(ICharStream input)
 		: base(input)
 	{
 		_interp = new LexerATNSimulator(this,_ATN);
 	}
 
-	public override string GrammarFileName { get { return "sparql.g4"; } }
+	public override string GrammarFileName { get { return "sparql2XML.g4"; } }
 
 	public override string[] TokenNames { get { return tokenNames; } }
 

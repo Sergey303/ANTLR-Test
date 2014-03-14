@@ -1,6 +1,6 @@
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlLexer.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlParser.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlListener.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlBaseListener.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlVisitor.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlBaseVisitor.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLLexer.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLParser.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLListener.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLBaseListener.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLVisitor.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLBaseVisitor.cs

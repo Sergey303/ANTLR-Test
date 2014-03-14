@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql.g4 by ANTLR 4.2-SNAPSHOT
+// Generated from D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -32,7 +32,7 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.2-SNAPSHOT")]
 [System.CLSCompliant(false)]
-public partial class sparqlParser : Parser {
+public partial class sparql2XMLParser : Parser {
 	public const int
 		T__71=1, T__70=2, T__69=3, T__68=4, T__67=5, T__66=6, T__65=7, T__64=8, 
 		T__63=9, T__62=10, T__61=11, T__60=12, T__59=13, T__58=14, T__57=15, T__56=16, 
@@ -109,7 +109,7 @@ public partial class sparqlParser : Parser {
 		"numericLiteralUnsigned"
 	};
 
-	public override string GrammarFileName { get { return "sparql.g4"; } }
+	public override string GrammarFileName { get { return "sparql2XML.g4"; } }
 
 	public override string[] TokenNames { get { return tokenNames; } }
 
@@ -121,7 +121,7 @@ public partial class sparqlParser : Parser {
 		
 	public	XElement x=new XElement("sparql"), spo=new XElement("spo");
 
-	public sparqlParser(ITokenStream input)
+	public sparql2XMLParser(ITokenStream input)
 		: base(input)
 	{
 		_interp = new ParserATNSimulator(this,_ATN);
@@ -148,15 +148,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_query; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterQuery(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitQuery(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitQuery(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -225,15 +225,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_prologue; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterPrologue(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitPrologue(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPrologue(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -282,22 +282,22 @@ public partial class sparqlParser : Parser {
 	}
 
 	public partial class BasedeclContext : ParserRuleContext {
-		public ITerminalNode IRI_REF() { return GetToken(sparqlParser.IRI_REF, 0); }
+		public ITerminalNode IRI_REF() { return GetToken(sparql2XMLParser.IRI_REF, 0); }
 		public BasedeclContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_basedecl; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterBasedecl(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitBasedecl(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBasedecl(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -328,23 +328,23 @@ public partial class sparqlParser : Parser {
 	public partial class PrefixDeclContext : ParserRuleContext {
 		public IToken _PNAME_NS;
 		public IToken _IRI_REF;
-		public ITerminalNode IRI_REF() { return GetToken(sparqlParser.IRI_REF, 0); }
-		public ITerminalNode PNAME_NS() { return GetToken(sparqlParser.PNAME_NS, 0); }
+		public ITerminalNode IRI_REF() { return GetToken(sparql2XMLParser.IRI_REF, 0); }
+		public ITerminalNode PNAME_NS() { return GetToken(sparql2XMLParser.PNAME_NS, 0); }
 		public PrefixDeclContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_prefixDecl; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterPrefixDecl(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitPrefixDecl(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPrefixDecl(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -400,15 +400,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_selectQuery; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterSelectQuery(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitSelectQuery(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitSelectQuery(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -526,15 +526,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_constructQuery; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterConstructQuery(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitConstructQuery(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConstructQuery(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -607,15 +607,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_describeQuery; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterDescribeQuery(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitDescribeQuery(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDescribeQuery(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -714,15 +714,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_askQuery; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterAskQuery(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitAskQuery(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAskQuery(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -778,15 +778,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_datasetClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterDatasetClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitDatasetClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDatasetClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -840,15 +840,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_defaultGraphClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterDefaultGraphClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitDefaultGraphClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDefaultGraphClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -885,15 +885,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_namedGraphClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterNamedGraphClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitNamedGraphClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNamedGraphClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -932,15 +932,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_sourceSelector; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterSourceSelector(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitSourceSelector(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitSourceSelector(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -981,15 +981,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_whereClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterWhereClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitWhereClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitWhereClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1043,15 +1043,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_solutionModifier; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterSolutionModifier(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitSolutionModifier(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitSolutionModifier(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1112,15 +1112,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_limitOffsetClauses; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterLimitOffsetClauses(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitLimitOffsetClauses(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitLimitOffsetClauses(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1197,15 +1197,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_orderClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterOrderClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitOrderClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOrderClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1269,15 +1269,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_orderCondition; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterOrderCondition(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitOrderCondition(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOrderCondition(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1418,22 +1418,22 @@ public partial class sparqlParser : Parser {
 	public partial class LimitClauseContext : ParserRuleContext {
 		public XElement value;
 		public IToken _INTEGER;
-		public ITerminalNode INTEGER() { return GetToken(sparqlParser.INTEGER, 0); }
+		public ITerminalNode INTEGER() { return GetToken(sparql2XMLParser.INTEGER, 0); }
 		public LimitClauseContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_limitClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterLimitClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitLimitClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitLimitClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1465,22 +1465,22 @@ public partial class sparqlParser : Parser {
 	public partial class OffsetClauseContext : ParserRuleContext {
 		public XElement value;
 		public IToken _INTEGER;
-		public ITerminalNode INTEGER() { return GetToken(sparqlParser.INTEGER, 0); }
+		public ITerminalNode INTEGER() { return GetToken(sparql2XMLParser.INTEGER, 0); }
 		public OffsetClauseContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_offsetClause; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterOffsetClause(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitOffsetClause(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOffsetClause(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1539,15 +1539,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_groupGraphPattern; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterGroupGraphPattern(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitGroupGraphPattern(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitGroupGraphPattern(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1649,15 +1649,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_triplesBlock; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterTriplesBlock(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitTriplesBlock(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTriplesBlock(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1723,15 +1723,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_graphPatternNotTriples; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterGraphPatternNotTriples(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitGraphPatternNotTriples(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitGraphPatternNotTriples(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1792,15 +1792,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_optionalGraphPattern; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterOptionalGraphPattern(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitOptionalGraphPattern(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOptionalGraphPattern(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1845,15 +1845,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_graphGraphPattern; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterGraphGraphPattern(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitGraphGraphPattern(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitGraphGraphPattern(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1898,15 +1898,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_groupOrUnionGraphPattern; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterGroupOrUnionGraphPattern(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitGroupOrUnionGraphPattern(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitGroupOrUnionGraphPattern(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1962,15 +1962,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_filter; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterFilter(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitFilter(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFilter(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2019,15 +2019,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_constraint; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterConstraint(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitConstraint(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConstraint(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2119,15 +2119,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_functionCall; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterFunctionCall(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitFunctionCall(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2163,7 +2163,7 @@ public partial class sparqlParser : Parser {
 		public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		public ITerminalNode NIL() { return GetToken(sparqlParser.NIL, 0); }
+		public ITerminalNode NIL() { return GetToken(sparql2XMLParser.NIL, 0); }
 		public IReadOnlyList<ExpressionContext> expression() {
 			return GetRuleContexts<ExpressionContext>();
 		}
@@ -2173,15 +2173,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_argList; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterArgList(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitArgList(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitArgList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2254,15 +2254,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_constructTemplate; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterConstructTemplate(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitConstructTemplate(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConstructTemplate(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2316,15 +2316,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_constructTriples; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterConstructTriples(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitConstructTriples(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConstructTriples(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2394,15 +2394,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_triplesSameSubject; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterTriplesSameSubject(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitTriplesSameSubject(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTriplesSameSubject(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2483,15 +2483,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_propertyListNotEmpty; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterPropertyListNotEmpty(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitPropertyListNotEmpty(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPropertyListNotEmpty(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2556,15 +2556,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_propertyList; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterPropertyList(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitPropertyList(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPropertyList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2616,15 +2616,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_objectList; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterObjectList(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitObjectList(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitObjectList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2680,15 +2680,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_object; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterObject(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitObject(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitObject(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2728,15 +2728,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_verb; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterVerb(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitVerb(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitVerb(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2797,15 +2797,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_triplesNode; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterTriplesNode(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitTriplesNode(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTriplesNode(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2859,15 +2859,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_blankNodePropertyList; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterBlankNodePropertyList(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitBlankNodePropertyList(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBlankNodePropertyList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2912,15 +2912,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_collection; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterCollection(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitCollection(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitCollection(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2979,15 +2979,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_graphNode; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterGraphNode(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitGraphNode(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitGraphNode(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3057,15 +3057,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_varOrTerm; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterVarOrTerm(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitVarOrTerm(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitVarOrTerm(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3134,15 +3134,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_varOrIRIref; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterVarOrIRIref(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitVarOrIRIref(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitVarOrIRIref(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3190,23 +3190,23 @@ public partial class sparqlParser : Parser {
 		public XElement value;
 		public IToken _VAR1;
 		public IToken _VAR2;
-		public ITerminalNode VAR2() { return GetToken(sparqlParser.VAR2, 0); }
-		public ITerminalNode VAR1() { return GetToken(sparqlParser.VAR1, 0); }
+		public ITerminalNode VAR2() { return GetToken(sparql2XMLParser.VAR2, 0); }
+		public ITerminalNode VAR1() { return GetToken(sparql2XMLParser.VAR1, 0); }
 		public VarContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_var; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterVar(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitVar(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitVar(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3258,12 +3258,12 @@ public partial class sparqlParser : Parser {
 		public RDFLiteralContext rDFLiteral() {
 			return GetRuleContext<RDFLiteralContext>(0);
 		}
-		public ITerminalNode BlankNode() { return GetToken(sparqlParser.BlankNode, 0); }
+		public ITerminalNode BlankNode() { return GetToken(sparql2XMLParser.BlankNode, 0); }
 		public IRIrefContext iRIref() {
 			return GetRuleContext<IRIrefContext>(0);
 		}
-		public ITerminalNode NIL() { return GetToken(sparqlParser.NIL, 0); }
-		public ITerminalNode BooleanLiteral() { return GetToken(sparqlParser.BooleanLiteral, 0); }
+		public ITerminalNode NIL() { return GetToken(sparql2XMLParser.NIL, 0); }
+		public ITerminalNode BooleanLiteral() { return GetToken(sparql2XMLParser.BooleanLiteral, 0); }
 		public NumericLiteralContext numericLiteral() {
 			return GetRuleContext<NumericLiteralContext>(0);
 		}
@@ -3273,15 +3273,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_graphTerm; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterGraphTerm(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitGraphTerm(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitGraphTerm(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3368,15 +3368,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_expression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3419,15 +3419,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_conditionalOrExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterConditionalOrExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitConditionalOrExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConditionalOrExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3487,15 +3487,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_conditionalAndExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterConditionalAndExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitConditionalAndExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConditionalAndExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3551,15 +3551,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_valueLogical; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterValueLogical(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitValueLogical(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitValueLogical(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3603,15 +3603,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_relationalExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterRelationalExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitRelationalExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitRelationalExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3703,15 +3703,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_numericExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterNumericExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitNumericExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumericExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3746,34 +3746,34 @@ public partial class sparqlParser : Parser {
 		public IToken _NumericLiteralPositive;
 		public IToken _NumericLiteralNegative;
 		public ITerminalNode NumericLiteralNegative(int i) {
-			return GetToken(sparqlParser.NumericLiteralNegative, i);
+			return GetToken(sparql2XMLParser.NumericLiteralNegative, i);
 		}
 		public MultiplicativeExpressionContext multiplicativeExpression(int i) {
 			return GetRuleContext<MultiplicativeExpressionContext>(i);
 		}
 		public ITerminalNode NumericLiteralPositive(int i) {
-			return GetToken(sparqlParser.NumericLiteralPositive, i);
+			return GetToken(sparql2XMLParser.NumericLiteralPositive, i);
 		}
 		public IReadOnlyList<MultiplicativeExpressionContext> multiplicativeExpression() {
 			return GetRuleContexts<MultiplicativeExpressionContext>();
 		}
-		public IReadOnlyList<ITerminalNode> NumericLiteralPositive() { return GetTokens(sparqlParser.NumericLiteralPositive); }
-		public IReadOnlyList<ITerminalNode> NumericLiteralNegative() { return GetTokens(sparqlParser.NumericLiteralNegative); }
+		public IReadOnlyList<ITerminalNode> NumericLiteralPositive() { return GetTokens(sparql2XMLParser.NumericLiteralPositive); }
+		public IReadOnlyList<ITerminalNode> NumericLiteralNegative() { return GetTokens(sparql2XMLParser.NumericLiteralNegative); }
 		public AdditiveExpressionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_additiveExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterAdditiveExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitAdditiveExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAdditiveExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3859,15 +3859,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_multiplicativeExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterMultiplicativeExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitMultiplicativeExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitMultiplicativeExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3938,15 +3938,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_unaryExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterUnaryExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitUnaryExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitUnaryExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4067,7 +4067,7 @@ public partial class sparqlParser : Parser {
 		public VarContext var() {
 			return GetRuleContext<VarContext>(0);
 		}
-		public ITerminalNode BooleanLiteral() { return GetToken(sparqlParser.BooleanLiteral, 0); }
+		public ITerminalNode BooleanLiteral() { return GetToken(sparql2XMLParser.BooleanLiteral, 0); }
 		public NumericLiteralContext numericLiteral() {
 			return GetRuleContext<NumericLiteralContext>(0);
 		}
@@ -4077,15 +4077,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_primaryExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterPrimaryExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitPrimaryExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPrimaryExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4206,15 +4206,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_brackettedExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterBrackettedExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitBrackettedExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBrackettedExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4269,15 +4269,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_builtInCall; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterBuiltInCall(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitBuiltInCall(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBuiltInCall(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4475,15 +4475,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_regexExpression; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterRegexExpression(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitRegexExpression(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitRegexExpression(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4547,15 +4547,15 @@ public partial class sparqlParser : Parser {
 		}
 		public override int GetRuleIndex() { return RULE_iRIrefOrFunction; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterIRIrefOrFunction(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitIRIrefOrFunction(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIRIrefOrFunction(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4598,26 +4598,26 @@ public partial class sparqlParser : Parser {
 		public IToken _String;
 		public IToken _LANGTAG;
 		public IRIrefContext _iRIref;
-		public ITerminalNode String() { return GetToken(sparqlParser.String, 0); }
+		public ITerminalNode String() { return GetToken(sparql2XMLParser.String, 0); }
 		public IRIrefContext iRIref() {
 			return GetRuleContext<IRIrefContext>(0);
 		}
-		public ITerminalNode LANGTAG() { return GetToken(sparqlParser.LANGTAG, 0); }
+		public ITerminalNode LANGTAG() { return GetToken(sparql2XMLParser.LANGTAG, 0); }
 		public RDFLiteralContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_rDFLiteral; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterRDFLiteral(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitRDFLiteral(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitRDFLiteral(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4708,23 +4708,23 @@ public partial class sparqlParser : Parser {
 		public XElement value;
 		public IToken _IRI_REF;
 		public IToken _PREFIXED_NAME;
-		public ITerminalNode IRI_REF() { return GetToken(sparqlParser.IRI_REF, 0); }
-		public ITerminalNode PREFIXED_NAME() { return GetToken(sparqlParser.PREFIXED_NAME, 0); }
+		public ITerminalNode IRI_REF() { return GetToken(sparql2XMLParser.IRI_REF, 0); }
+		public ITerminalNode PREFIXED_NAME() { return GetToken(sparql2XMLParser.PREFIXED_NAME, 0); }
 		public IRIrefContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_iRIref; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterIRIref(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitIRIref(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIRIref(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4767,26 +4767,26 @@ public partial class sparqlParser : Parser {
 	}
 
 	public partial class NumericLiteralContext : ParserRuleContext {
-		public ITerminalNode NumericLiteralPositive() { return GetToken(sparqlParser.NumericLiteralPositive, 0); }
+		public ITerminalNode NumericLiteralPositive() { return GetToken(sparql2XMLParser.NumericLiteralPositive, 0); }
 		public NumericLiteralUnsignedContext numericLiteralUnsigned() {
 			return GetRuleContext<NumericLiteralUnsignedContext>(0);
 		}
-		public ITerminalNode NumericLiteralNegative() { return GetToken(sparqlParser.NumericLiteralNegative, 0); }
+		public ITerminalNode NumericLiteralNegative() { return GetToken(sparql2XMLParser.NumericLiteralNegative, 0); }
 		public NumericLiteralContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_numericLiteral; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterNumericLiteral(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitNumericLiteral(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumericLiteral(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4835,24 +4835,24 @@ public partial class sparqlParser : Parser {
 	}
 
 	public partial class NumericLiteralUnsignedContext : ParserRuleContext {
-		public ITerminalNode DOUBLE() { return GetToken(sparqlParser.DOUBLE, 0); }
-		public ITerminalNode INTEGER() { return GetToken(sparqlParser.INTEGER, 0); }
-		public ITerminalNode DECIMAL() { return GetToken(sparqlParser.DECIMAL, 0); }
+		public ITerminalNode DOUBLE() { return GetToken(sparql2XMLParser.DOUBLE, 0); }
+		public ITerminalNode INTEGER() { return GetToken(sparql2XMLParser.INTEGER, 0); }
+		public ITerminalNode DECIMAL() { return GetToken(sparql2XMLParser.DECIMAL, 0); }
 		public NumericLiteralUnsignedContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int GetRuleIndex() { return RULE_numericLiteralUnsigned; }
 		public override void EnterRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.EnterNumericLiteralUnsigned(this);
 		}
 		public override void ExitRule(IParseTreeListener listener) {
-			IsparqlListener typedListener = listener as IsparqlListener;
+			Isparql2XMLListener typedListener = listener as Isparql2XMLListener;
 			if (typedListener != null) typedListener.ExitNumericLiteralUnsigned(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IsparqlVisitor<TResult> typedVisitor = visitor as IsparqlVisitor<TResult>;
+			Isparql2XMLVisitor<TResult> typedVisitor = visitor as Isparql2XMLVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumericLiteralUnsigned(this);
 			else return visitor.VisitChildren(this);
 		}

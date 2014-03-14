@@ -45,9 +45,9 @@ namespace ANTLR_Test
             //CalcParser parser = new CalcParser(tokens);
             //// И запускаем первое правило грамматики!!!
             //parser.calc();
-            sparqlLexer lexer = new sparqlLexer(input);
+            sparql2XMLLexer lexer = new sparql2XMLLexer(input);
             var commonTokenStream = new CommonTokenStream(lexer);
-            var sparqlParser = new sparqlParser(commonTokenStream);
+            var sparqlParser = new sparql2XMLParser(commonTokenStream);
             sparqlParser.query();
             return sparqlParser.x;
         }

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-grammar sparql;
+grammar sparql2XML;
 options
 {
 	language = CSharp2;

@@ -1,16 +1,14 @@
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\bin\Debug\ANTLR Test.exe.config
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\bin\Debug\ANTLR Test.exe
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\bin\Debug\ANTLR Test.pdb
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\bin\Debug\Antlr4.Runtime.v4.5.dll
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\bin\Debug\Antlr4.Runtime.v4.5.xml
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.exe
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.pdb
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlLexer.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlParser.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlListener.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlBaseListener.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlVisitor.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\sparqlBaseVisitor.cs
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.csprojResolveAssemblyReference.cache
-D:\Users\Admin\Source\Repos\ANTLR Test\ANTLR Test\bin\Debug\QUT.ShiftReduceParser.dll
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\bin\Debug\ANTLR Test.exe.config
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\bin\Debug\ANTLR Test.exe
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\bin\Debug\ANTLR Test.pdb
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\bin\Debug\Antlr4.Runtime.v4.5.dll
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\bin\Debug\Antlr4.Runtime.v4.5.xml
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLLexer.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLParser.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLListener.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLBaseListener.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLVisitor.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\sparql2XMLBaseVisitor.cs
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.exe
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\obj\Debug\ANTLR Test.pdb
