@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sparql>
+  <prefix>
+    <name>dataFromVendor1:</name>
+    <name>&lt;http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor1/&gt;</name>
+  </prefix>
+  <select>
+    <variable>?property</variable>
+    <variable>?hasValue</variable>
+    <variable>?isValueOf</variable>
+  </select>
+  <WHERE>
+    <UNION>
+      <s>
+        <PREFIXED_NAME>dataFromVendor1:Offer1</PREFIXED_NAME>
+        <p>
+          <var>?property</var>
+          <o>
+            <var>?hasValue</var>
+          </o>
+        </p>
+      </s>
+      <s>
+        <var>?isValueOf</var>
+        <p>
+          <var>?property</var>
+          <o>
+            <PREFIXED_NAME>dataFromVendor1:Offer1</PREFIXED_NAME>
+          </o>
+        </p>
+      </s>
+    </UNION>
+  </WHERE>
+</sparql>

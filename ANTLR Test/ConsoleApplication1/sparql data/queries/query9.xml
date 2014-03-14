@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sparql>
+  <prefix>
+    <name>rev:</name>
+    <name>&lt;http://purl.org/stuff/rev#&gt;</name>
+  </prefix>
+  <prefix>
+    <name>dataFromRatingSite1:</name>
+    <name>&lt;http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite1/&gt;</name>
+  </prefix>
+  <DESCRIBE>
+    <var>?x</var>
+  </DESCRIBE>
+  <WHERE>
+    <s>
+      <PREFIXED_NAME>dataFromRatingSite1:Review1</PREFIXED_NAME>
+      <p>
+        <PREFIXED_NAME>rev:reviewer</PREFIXED_NAME>
+        <o>
+          <var>?x</var>
+        </o>
+      </p>
+    </s>
+  </WHERE>
+</sparql>

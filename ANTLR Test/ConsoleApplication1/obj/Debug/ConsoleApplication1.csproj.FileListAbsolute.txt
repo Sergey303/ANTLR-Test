@@ -1,0 +1,11 @@
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\bin\Debug\Antlr4.Runtime.v4.5.dll
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\bin\Debug\Antlr4.Runtime.v4.5.xml
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Users\Admin\Source\Repos\ANTLR Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
