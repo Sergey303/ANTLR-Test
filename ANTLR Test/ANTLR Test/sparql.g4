@@ -50,7 +50,7 @@ describeQuery	 :'DESCRIBE' { x.Add(new XElement("DESCRIBE"));}
 ( (varOrIRIref {x.Element("DESCRIBE").Add($varOrIRIref.value);})+ 
 | '*' {x.Element("DESCRIBE").Add("all");}) datasetClause* whereClause? solutionModifier  ;
 
-askQuery	 :'ASK' datasetClause* whereClause;
+askQuery	 :'ASK' {x.Add(new XElement("ask"));} datasetClause* whereClause;
 
 datasetClause	 :'FROM'  { if(x.Element("from")==null) x.Add(new XElement("from")); }( defaultGraphClause | namedGraphClause );
 
