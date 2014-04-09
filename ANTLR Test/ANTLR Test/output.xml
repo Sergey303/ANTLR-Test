@@ -1,82 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sparql>
   <prefix>
-    <name>bsbm-inst:</name>
-    <name>&lt;http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/&gt;</name>
-  </prefix>
-  <prefix>
-    <name>bsbm:</name>
-    <name>&lt;http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/&gt;</name>
+    <name>ns:</name>
+    <name>&lt;http://fogid.net/o/&gt;</name>
   </prefix>
   <prefix>
     <name>rdfs:</name>
-    <name>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</name>
-  </prefix>
-  <prefix>
-    <name>rdf:</name>
     <name>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</name>
   </prefix>
   <select>
-    <DISTINCT />
-    <variable>?product</variable>
-    <variable>?label</variable>
-    <variable>?propertyTextual</variable>
+    <variable>?personName</variable>
+    <variable>?fd</variable>
+    <variable>?td</variable>
+    <variable>?orgname</variable>
+    <variable>?ro</variable>
   </select>
   <WHERE>
     <UNION>
-      <s>
-        <var>?product</var>
-        <p>
-          <PREFIXED_NAME>bsbm:productFeature</PREFIXED_NAME>
-          <o>
-            <PREFIXED_NAME>bsbm-inst:ProductFeature1</PREFIXED_NAME>
-          </o>
-        </p>
-      </s>
-      <s>
-        <var>?product</var>
-        <p>
-          <PREFIXED_NAME>bsbm:productFeature</PREFIXED_NAME>
-          <o>
-            <PREFIXED_NAME>bsbm-inst:ProductFeature1</PREFIXED_NAME>
-          </o>
-        </p>
-      </s>
       <Filter>
-        <more>
-          <var>?p1</var>
-          <numericLiteral>1</numericLiteral>
-        </more>
+        <or>
+          <or>
+            <eq>
+              <var>?person</var>
+              <PREFIXED_NAME>ns:piu_200809051791</PREFIXED_NAME>
+            </eq>
+            <eq>
+              <var>?person</var>
+              <PREFIXED_NAME>ns:svet_100616111408_10844</PREFIXED_NAME>
+            </eq>
+          </or>
+          <or>
+            <eq>
+              <var>?person</var>
+              <PREFIXED_NAME>ns:pavl_100531115859_2020</PREFIXED_NAME>
+            </eq>
+            <eq>
+              <var>?person</var>
+              <PREFIXED_NAME>ns:pavl_100531115859_6952</PREFIXED_NAME>
+            </eq>
+          </or>
+        </or>
       </Filter>
-      <s>
-        <var>?product</var>
-        <p>
-          <PREFIXED_NAME>bsbm:productFeature</PREFIXED_NAME>
-          <o>
-            <PREFIXED_NAME>bsbm-inst:ProductFeature1</PREFIXED_NAME>
-          </o>
-        </p>
-      </s>
-      <s>
-        <var>?product</var>
-        <p>
-          <PREFIXED_NAME>bsbm:productFeature</PREFIXED_NAME>
-          <o>
-            <PREFIXED_NAME>bsbm-inst:ProductFeature1</PREFIXED_NAME>
-          </o>
-        </p>
-      </s>
       <Filter>
-        <more>
-          <var>?p2</var>
-          <numericLiteral>1</numericLiteral>
-        </more>
+        <or>
+          <or>
+            <eq>
+              <var>?person</var>
+              <PREFIXED_NAME>ns:svet_100616111408_10864</PREFIXED_NAME>
+            </eq>
+            <eq>
+              <var>?person</var>
+              <PREFIXED_NAME>ns:w20090506_svetlana_5727</PREFIXED_NAME>
+            </eq>
+          </or>
+          <eq>
+            <var>?person</var>
+            <PREFIXED_NAME>ns:piu_200809051742</PREFIXED_NAME>
+          </eq>
+        </or>
       </Filter>
     </UNION>
+    <s>
+      <var>?person</var>
+      <p>
+        <PREFIXED_NAME>ns:name</PREFIXED_NAME>
+        <o>
+          <var>?personName</var>
+        </o>
+      </p>
+    </s>
+    <s>
+      <var>?person</var>
+      <p>
+        <PREFIXED_NAME>ns:name</PREFIXED_NAME>
+        <o>
+          <var>?personName</var>
+        </o>
+      </p>
+    </s>
+    <Optional>
+      <s>
+        <var>?s</var>
+        <p>
+          <PREFIXED_NAME>ns:role</PREFIXED_NAME>
+          <o>
+            <var>?ro</var>
+          </o>
+        </p>
+      </s>
+    </Optional>
+    <Optional>
+      <s>
+        <var>?s</var>
+        <p>
+          <PREFIXED_NAME>ns:from-date</PREFIXED_NAME>
+          <o>
+            <var>?fd</var>
+          </o>
+        </p>
+      </s>
+    </Optional>
+    <Optional>
+      <s>
+        <var>?s</var>
+        <p>
+          <PREFIXED_NAME>ns:to-date</PREFIXED_NAME>
+          <o>
+            <var>?td</var>
+          </o>
+        </p>
+      </s>
+    </Optional>
   </WHERE>
-  <orderBy>
-    <var>?label</var>
-  </orderBy>
-  <offset>5</offset>
-  <limit>10</limit>
 </sparql>

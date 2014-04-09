@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
+// Generated from C:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -209,6 +209,13 @@ public interface Isparql2XMLVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitNamedGraphClause([NotNull] sparql2XMLParser.NamedGraphClauseContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2XMLParser.varOrTermSub"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitVarOrTermSub([NotNull] sparql2XMLParser.VarOrTermSubContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="sparql2XMLParser.constructTriples"/>.

@@ -133,7 +133,7 @@ constructTriples	returns [List<XElement> value]
 ( '.' (next= constructTriples { $value.AddRange($next.value); })? )?	;
 
 triplesSameSubject	 returns [XElement value]
-:	varOrTerm propertyListNotEmpty  { $value = new XElement("s", $varOrTerm.value, $propertyListNotEmpty.value);} 
+:	varOrTermSub propertyListNotEmpty  { $value = new XElement("s", $varOrTermSub.value, $propertyListNotEmpty.value);} 
 |	triplesNode propertyList	{ $value = new XElement("tripletsGroup", $triplesNode.value, $propertyList.value);} ;
 
 propertyListNotEmpty returns [List<XElement> value]
@@ -165,6 +165,12 @@ collection	 returns	[List<XElement> value] :'(' {$value = new List<XElement>();}
 graphNode	 returns [XElement value]
 : varOrTerm {$value=$varOrTerm.value; }
 |	triplesNode	;
+
+varOrTermSub returns[XElement value]	
+: var {	     
+    $value = new XElement("var", $var.text); 
+	} 
+| graphTerm  {	         $value = $graphTerm.value; };
 
 varOrTerm returns[XElement value]	
 : var {	         $value = new XElement("var", $var.text); } 
@@ -283,7 +289,7 @@ BlankNode	 :BLANK_NODE_LABEL |	ANON ;
 
 IRI_REF	: '<'([a-zA-Zà-ÿÀ-ß0-9:/\\#.\x00-\x20-])*'>';
 PNAME_NS	 : PN_PREFIX? ':';		
-PREFIXED_NAME	 : PNAME_LN | PNAME_NS ;
+PREFIXED_NAME	 : PNAME_LN ;
 
 PNAME_LN	 :PNAME_NS PN_LOCAL ;
 BLANK_NODE_LABEL	 :'_:' PN_LOCAL ;

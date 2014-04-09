@@ -11,11 +11,11 @@ WHERE {
 	?product bsbm:productPropertyNumeric1 ?p1 .
 	FILTER ( ?p1 > 1 ) 
 	?product bsbm:productPropertyNumeric3 ?p3 .
-	FILTER (?p3 < 100000 )
+	FILTER (?p3 < 500 )
     OPTIONAL { 
         ?product bsbm:productFeature bsbm-inst:ProductFeature2 .
         ?product rdfs:label ?testVar }
-    FILTER (!bound(?testVar)) 
+    FILTER (!bound(?testVar)) 	
 }
 ORDER BY ?label
 LIMIT 10

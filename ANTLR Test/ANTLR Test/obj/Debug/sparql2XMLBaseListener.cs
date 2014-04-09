@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
+// Generated from C:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -362,6 +362,19 @@ public partial class sparql2XMLBaseListener : Isparql2XMLListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitNamedGraphClause([NotNull] sparql2XMLParser.NamedGraphClauseContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="sparql2XMLParser.varOrTermSub"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterVarOrTermSub([NotNull] sparql2XMLParser.VarOrTermSubContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="sparql2XMLParser.varOrTermSub"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitVarOrTermSub([NotNull] sparql2XMLParser.VarOrTermSubContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="sparql2XMLParser.constructTriples"/>.

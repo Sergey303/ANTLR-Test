@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2XML.g4 by ANTLR 4.2-SNAPSHOT
+// Generated from C:\Users\Admin\Source\Repos\ANTLR-Test\ANTLR Test\ANTLR Test\sparql2Pac.g4 by ANTLR 4.2-SNAPSHOT
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -20,8 +20,13 @@
 namespace ANTLR_Test {
 
 	using System;
+	using System.Linq;
 	using System.Xml.Linq;	
-	using System.Collections;
+	using System.Collections.Generic;
+	using System.Text.RegularExpressions;
+    using Sparql;
+    using TrueRdfViewer;
+	using System.Linq.Expressions;
 
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
@@ -29,16 +34,16 @@ using IToken = Antlr4.Runtime.IToken;
 using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 
 /// <summary>
-/// This class provides an empty implementation of <see cref="Isparql2XMLVisitor{Result}"/>,
+/// This class provides an empty implementation of <see cref="Isparql2PacVisitor{Result}"/>,
 /// which can be extended to create a visitor which only needs to handle a subset
 /// of the available methods.
 /// </summary>
 /// <typeparam name="Result">The return type of the visit operation.</typeparam>
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.2-SNAPSHOT")]
 [System.CLSCompliant(false)]
-public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, Isparql2XMLVisitor<Result> {
+public partial class sparql2PacBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, Isparql2PacVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.expression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -46,10 +51,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitExpression([NotNull] sparql2XMLParser.ExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitExpression([NotNull] sparql2PacParser.ExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.whereClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.varOrIRIref"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -57,10 +62,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWhereClause([NotNull] sparql2XMLParser.WhereClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarOrIRIref([NotNull] sparql2PacParser.VarOrIRIrefContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.varOrIRIref"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.whereClause"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -68,10 +73,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVarOrIRIref([NotNull] sparql2XMLParser.VarOrIRIrefContext context) { return VisitChildren(context); }
+	public virtual Result VisitWhereClause([NotNull] sparql2PacParser.WhereClauseContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.graphGraphPattern"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.graphGraphPattern"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -79,10 +84,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGraphGraphPattern([NotNull] sparql2XMLParser.GraphGraphPatternContext context) { return VisitChildren(context); }
+	public virtual Result VisitGraphGraphPattern([NotNull] sparql2PacParser.GraphGraphPatternContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.limitOffsetClauses"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.numeric"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -90,10 +95,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLimitOffsetClauses([NotNull] sparql2XMLParser.LimitOffsetClausesContext context) { return VisitChildren(context); }
+	public virtual Result VisitNumeric([NotNull] sparql2PacParser.NumericContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.argList"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.limitOffsetClauses"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -101,10 +106,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitArgList([NotNull] sparql2XMLParser.ArgListContext context) { return VisitChildren(context); }
+	public virtual Result VisitLimitOffsetClauses([NotNull] sparql2PacParser.LimitOffsetClausesContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.limitClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.argList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -112,10 +117,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLimitClause([NotNull] sparql2XMLParser.LimitClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitArgList([NotNull] sparql2PacParser.ArgListContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.prefixDecl"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.limitClause"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -123,10 +128,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPrefixDecl([NotNull] sparql2XMLParser.PrefixDeclContext context) { return VisitChildren(context); }
+	public virtual Result VisitLimitClause([NotNull] sparql2PacParser.LimitClauseContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.propertyListNotEmpty"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.prefixDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -134,10 +139,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPropertyListNotEmpty([NotNull] sparql2XMLParser.PropertyListNotEmptyContext context) { return VisitChildren(context); }
+	public virtual Result VisitPrefixDecl([NotNull] sparql2PacParser.PrefixDeclContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.unaryExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.propertyListNotEmpty"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -145,10 +150,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitUnaryExpression([NotNull] sparql2XMLParser.UnaryExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitPropertyListNotEmpty([NotNull] sparql2PacParser.PropertyListNotEmptyContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.propertyList"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.unaryExpression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -156,10 +161,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPropertyList([NotNull] sparql2XMLParser.PropertyListContext context) { return VisitChildren(context); }
+	public virtual Result VisitUnaryExpression([NotNull] sparql2PacParser.UnaryExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.primaryExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.varLiteral"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -167,10 +172,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPrimaryExpression([NotNull] sparql2XMLParser.PrimaryExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarLiteral([NotNull] sparql2PacParser.VarLiteralContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.functionCall"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.propertyList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -178,10 +183,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunctionCall([NotNull] sparql2XMLParser.FunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitPropertyList([NotNull] sparql2PacParser.PropertyListContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.solutionModifier"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.primaryExpression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -189,10 +194,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSolutionModifier([NotNull] sparql2XMLParser.SolutionModifierContext context) { return VisitChildren(context); }
+	public virtual Result VisitPrimaryExpression([NotNull] sparql2PacParser.PrimaryExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.orderCondition"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.verbObjectListConstruct"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -200,10 +205,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOrderCondition([NotNull] sparql2XMLParser.OrderConditionContext context) { return VisitChildren(context); }
+	public virtual Result VisitVerbObjectListConstruct([NotNull] sparql2PacParser.VerbObjectListConstructContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.describeQuery"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -211,10 +216,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDescribeQuery([NotNull] sparql2XMLParser.DescribeQueryContext context) { return VisitChildren(context); }
+	public virtual Result VisitFunctionCall([NotNull] sparql2PacParser.FunctionCallContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.constructQuery"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.solutionModifier"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -222,10 +227,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConstructQuery([NotNull] sparql2XMLParser.ConstructQueryContext context) { return VisitChildren(context); }
+	public virtual Result VisitSolutionModifier([NotNull] sparql2PacParser.SolutionModifierContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.defaultGraphClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.graphNodeConstruct"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -233,10 +238,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDefaultGraphClause([NotNull] sparql2XMLParser.DefaultGraphClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitGraphNodeConstruct([NotNull] sparql2PacParser.GraphNodeConstructContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.triplesSameSubject"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.orderCondition"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -244,10 +249,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTriplesSameSubject([NotNull] sparql2XMLParser.TriplesSameSubjectContext context) { return VisitChildren(context); }
+	public virtual Result VisitOrderCondition([NotNull] sparql2PacParser.OrderConditionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.prologue"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.varOrTermConstruct"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -255,10 +260,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPrologue([NotNull] sparql2XMLParser.PrologueContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarOrTermConstruct([NotNull] sparql2PacParser.VarOrTermConstructContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.conditionalAndExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.describeQuery"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -266,10 +271,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConditionalAndExpression([NotNull] sparql2XMLParser.ConditionalAndExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitDescribeQuery([NotNull] sparql2PacParser.DescribeQueryContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.additiveExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.constructQuery"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -277,10 +282,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAdditiveExpression([NotNull] sparql2XMLParser.AdditiveExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitConstructQuery([NotNull] sparql2PacParser.ConstructQueryContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.builtInCall"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.defaultGraphClause"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -288,10 +293,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBuiltInCall([NotNull] sparql2XMLParser.BuiltInCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitDefaultGraphClause([NotNull] sparql2PacParser.DefaultGraphClauseContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.selectQuery"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.triplesSameSubject"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -299,10 +304,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSelectQuery([NotNull] sparql2XMLParser.SelectQueryContext context) { return VisitChildren(context); }
+	public virtual Result VisitTriplesSameSubject([NotNull] sparql2PacParser.TriplesSameSubjectContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.namedGraphClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.prologue"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -310,10 +315,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNamedGraphClause([NotNull] sparql2XMLParser.NamedGraphClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitPrologue([NotNull] sparql2PacParser.PrologueContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.varOrTermSub"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.conditionalAndExpression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -321,10 +326,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVarOrTermSub([NotNull] sparql2XMLParser.VarOrTermSubContext context) { return VisitChildren(context); }
+	public virtual Result VisitConditionalAndExpression([NotNull] sparql2PacParser.ConditionalAndExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.constructTriples"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.additiveExpression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -332,10 +337,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConstructTriples([NotNull] sparql2XMLParser.ConstructTriplesContext context) { return VisitChildren(context); }
+	public virtual Result VisitAdditiveExpression([NotNull] sparql2PacParser.AdditiveExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.iRIrefOrFunction"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.builtInCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -343,10 +348,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIRIrefOrFunction([NotNull] sparql2XMLParser.IRIrefOrFunctionContext context) { return VisitChildren(context); }
+	public virtual Result VisitBuiltInCall([NotNull] sparql2PacParser.BuiltInCallContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.constructTemplate"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.selectQuery"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -354,10 +359,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConstructTemplate([NotNull] sparql2XMLParser.ConstructTemplateContext context) { return VisitChildren(context); }
+	public virtual Result VisitSelectQuery([NotNull] sparql2PacParser.SelectQueryContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.filter"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.namedGraphClause"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -365,10 +370,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFilter([NotNull] sparql2XMLParser.FilterContext context) { return VisitChildren(context); }
+	public virtual Result VisitNamedGraphClause([NotNull] sparql2PacParser.NamedGraphClauseContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.multiplicativeExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.varOrTermSub"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -376,10 +381,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitMultiplicativeExpression([NotNull] sparql2XMLParser.MultiplicativeExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarOrTermSub([NotNull] sparql2PacParser.VarOrTermSubContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.groupOrUnionGraphPattern"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.constructTriples"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -387,10 +392,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGroupOrUnionGraphPattern([NotNull] sparql2XMLParser.GroupOrUnionGraphPatternContext context) { return VisitChildren(context); }
+	public virtual Result VisitConstructTriples([NotNull] sparql2PacParser.ConstructTriplesContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.varOrTerm"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.iRIrefOrFunction"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -398,10 +403,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVarOrTerm([NotNull] sparql2XMLParser.VarOrTermContext context) { return VisitChildren(context); }
+	public virtual Result VisitIRIrefOrFunction([NotNull] sparql2PacParser.IRIrefOrFunctionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.query"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.constructTemplate"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -409,10 +414,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitQuery([NotNull] sparql2XMLParser.QueryContext context) { return VisitChildren(context); }
+	public virtual Result VisitConstructTemplate([NotNull] sparql2PacParser.ConstructTemplateContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.var"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.filter"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -420,10 +425,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVar([NotNull] sparql2XMLParser.VarContext context) { return VisitChildren(context); }
+	public virtual Result VisitFilter([NotNull] sparql2PacParser.FilterContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.graphTerm"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.multiplicativeExpression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -431,10 +436,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGraphTerm([NotNull] sparql2XMLParser.GraphTermContext context) { return VisitChildren(context); }
+	public virtual Result VisitMultiplicativeExpression([NotNull] sparql2PacParser.MultiplicativeExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.constraint"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.groupOrUnionGraphPattern"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -442,10 +447,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConstraint([NotNull] sparql2XMLParser.ConstraintContext context) { return VisitChildren(context); }
+	public virtual Result VisitGroupOrUnionGraphPattern([NotNull] sparql2PacParser.GroupOrUnionGraphPatternContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.regexExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.verbObjectList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -453,10 +458,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitRegexExpression([NotNull] sparql2XMLParser.RegexExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitVerbObjectList([NotNull] sparql2PacParser.VerbObjectListContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.triplesNode"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.varOrTerm"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -464,10 +469,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTriplesNode([NotNull] sparql2XMLParser.TriplesNodeContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarOrTerm([NotNull] sparql2PacParser.VarOrTermContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.objectList"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.var"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -475,10 +480,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitObjectList([NotNull] sparql2XMLParser.ObjectListContext context) { return VisitChildren(context); }
+	public virtual Result VisitVar([NotNull] sparql2PacParser.VarContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.@object"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.query"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -486,10 +491,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitObject([NotNull] sparql2XMLParser.ObjectContext context) { return VisitChildren(context); }
+	public virtual Result VisitQuery([NotNull] sparql2PacParser.QueryContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.collection"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.graphTerm"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -497,10 +502,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCollection([NotNull] sparql2XMLParser.CollectionContext context) { return VisitChildren(context); }
+	public virtual Result VisitGraphTerm([NotNull] sparql2PacParser.GraphTermContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.triplesBlock"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.constraint"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -508,10 +513,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTriplesBlock([NotNull] sparql2XMLParser.TriplesBlockContext context) { return VisitChildren(context); }
+	public virtual Result VisitConstraint([NotNull] sparql2PacParser.ConstraintContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.groupGraphPattern"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.regexExpression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -519,10 +524,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGroupGraphPattern([NotNull] sparql2XMLParser.GroupGraphPatternContext context) { return VisitChildren(context); }
+	public virtual Result VisitRegexExpression([NotNull] sparql2PacParser.RegexExpressionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.orderClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.triplesNode"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -530,10 +535,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOrderClause([NotNull] sparql2XMLParser.OrderClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitTriplesNode([NotNull] sparql2PacParser.TriplesNodeContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.verb"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.collection"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -541,10 +546,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVerb([NotNull] sparql2XMLParser.VerbContext context) { return VisitChildren(context); }
+	public virtual Result VisitCollection([NotNull] sparql2PacParser.CollectionContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.optionalGraphPattern"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.objectList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -552,10 +557,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOptionalGraphPattern([NotNull] sparql2XMLParser.OptionalGraphPatternContext context) { return VisitChildren(context); }
+	public virtual Result VisitObjectList([NotNull] sparql2PacParser.ObjectListContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.relationalExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.triplesBlock"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -563,10 +568,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitRelationalExpression([NotNull] sparql2XMLParser.RelationalExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitTriplesBlock([NotNull] sparql2PacParser.TriplesBlockContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.basedecl"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.propertyListNotEmptyConstruct"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -574,10 +579,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBasedecl([NotNull] sparql2XMLParser.BasedeclContext context) { return VisitChildren(context); }
+	public virtual Result VisitPropertyListNotEmptyConstruct([NotNull] sparql2PacParser.PropertyListNotEmptyConstructContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.blankNodePropertyList"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.groupGraphPattern"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -585,10 +590,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBlankNodePropertyList([NotNull] sparql2XMLParser.BlankNodePropertyListContext context) { return VisitChildren(context); }
+	public virtual Result VisitGroupGraphPattern([NotNull] sparql2PacParser.GroupGraphPatternContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.conditionalOrExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.orderClause"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -596,10 +601,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConditionalOrExpression([NotNull] sparql2XMLParser.ConditionalOrExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitOrderClause([NotNull] sparql2PacParser.OrderClauseContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.numericLiteral"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.verb"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -607,10 +612,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNumericLiteral([NotNull] sparql2XMLParser.NumericLiteralContext context) { return VisitChildren(context); }
+	public virtual Result VisitVerb([NotNull] sparql2PacParser.VerbContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.numericExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.optionalGraphPattern"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -618,10 +623,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNumericExpression([NotNull] sparql2XMLParser.NumericExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitOptionalGraphPattern([NotNull] sparql2PacParser.OptionalGraphPatternContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.iRIref"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.basedecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -629,10 +634,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIRIref([NotNull] sparql2XMLParser.IRIrefContext context) { return VisitChildren(context); }
+	public virtual Result VisitBasedecl([NotNull] sparql2PacParser.BasedeclContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.datasetClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.blankNodePropertyList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -640,10 +645,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDatasetClause([NotNull] sparql2XMLParser.DatasetClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitBlankNodePropertyList([NotNull] sparql2PacParser.BlankNodePropertyListContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.graphNode"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.numericLiteral"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -651,10 +656,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGraphNode([NotNull] sparql2XMLParser.GraphNodeContext context) { return VisitChildren(context); }
+	public virtual Result VisitNumericLiteral([NotNull] sparql2PacParser.NumericLiteralContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.rDFLiteral"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.iRIref"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -662,10 +667,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitRDFLiteral([NotNull] sparql2XMLParser.RDFLiteralContext context) { return VisitChildren(context); }
+	public virtual Result VisitIRIref([NotNull] sparql2PacParser.IRIrefContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.graphPatternNotTriples"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.graphNode"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -673,10 +678,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGraphPatternNotTriples([NotNull] sparql2XMLParser.GraphPatternNotTriplesContext context) { return VisitChildren(context); }
+	public virtual Result VisitGraphNode([NotNull] sparql2PacParser.GraphNodeContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.sourceSelector"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.datasetClause"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -684,10 +689,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSourceSelector([NotNull] sparql2XMLParser.SourceSelectorContext context) { return VisitChildren(context); }
+	public virtual Result VisitDatasetClause([NotNull] sparql2PacParser.DatasetClauseContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.numericLiteralUnsigned"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.rDFLiteral"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -695,10 +700,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNumericLiteralUnsigned([NotNull] sparql2XMLParser.NumericLiteralUnsignedContext context) { return VisitChildren(context); }
+	public virtual Result VisitRDFLiteral([NotNull] sparql2PacParser.RDFLiteralContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.valueLogical"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.graphPatternNotTriples"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -706,10 +711,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitValueLogical([NotNull] sparql2XMLParser.ValueLogicalContext context) { return VisitChildren(context); }
+	public virtual Result VisitGraphPatternNotTriples([NotNull] sparql2PacParser.GraphPatternNotTriplesContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.offsetClause"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.sourceSelector"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -717,10 +722,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOffsetClause([NotNull] sparql2XMLParser.OffsetClauseContext context) { return VisitChildren(context); }
+	public virtual Result VisitSourceSelector([NotNull] sparql2PacParser.SourceSelectorContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.askQuery"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.verbConstruct"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -728,10 +733,10 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAskQuery([NotNull] sparql2XMLParser.AskQueryContext context) { return VisitChildren(context); }
+	public virtual Result VisitVerbConstruct([NotNull] sparql2PacParser.VerbConstructContext context) { return VisitChildren(context); }
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="sparql2XMLParser.brackettedExpression"/>.
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.varOrTermSubConstruct"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -739,6 +744,94 @@ public partial class sparql2XMLBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBrackettedExpression([NotNull] sparql2XMLParser.BrackettedExpressionContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarOrTermSubConstruct([NotNull] sparql2PacParser.VarOrTermSubConstructContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.numericLiteralUnsigned"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitNumericLiteralUnsigned([NotNull] sparql2PacParser.NumericLiteralUnsignedContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.valueLogical"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitValueLogical([NotNull] sparql2PacParser.ValueLogicalContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.offsetClause"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitOffsetClause([NotNull] sparql2PacParser.OffsetClauseContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.objectListConstruct"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitObjectListConstruct([NotNull] sparql2PacParser.ObjectListConstructContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.graphTermConstuct"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitGraphTermConstuct([NotNull] sparql2PacParser.GraphTermConstuctContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.askQuery"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitAskQuery([NotNull] sparql2PacParser.AskQueryContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.triplesSameSubjectConstruct"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTriplesSameSubjectConstruct([NotNull] sparql2PacParser.TriplesSameSubjectConstructContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="sparql2PacParser.brackettedExpression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitBrackettedExpression([NotNull] sparql2PacParser.BrackettedExpressionContext context) { return VisitChildren(context); }
 }
 } // namespace ANTLR_Test
